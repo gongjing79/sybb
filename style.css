@@ -1,0 +1,493 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    background-color: #e0f7fa;
+    scroll-behavior: smooth;
+}
+
+/* 导航栏 */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4fc3f7;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffeb3b;
+}
+
+/* 头部横幅 */
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+/* 关于我板块 */
+.about {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-left, .about-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-left h2, .about-right h2 {
+    background-color: #aed581;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid #aed581;
+    cursor: zoom-in;
+}
+
+.info {
+    list-style: none;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hobby-btn {
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: #64b5f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hobby-btn:hover {
+    background-color: #2196f3;
+}
+
+.intro-bg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: zoom-in;
+}
+
+.intro-text {
+    line-height: 1.8;
+    text-indent: 2em;
+    color: #333;
+}
+
+/* 励志横幅 */
+.inspire {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    cursor: zoom-in;
+    overflow: hidden;
+}
+.inspire-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.inspire h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.inspire p {
+    font-size: 18px;
+}
+
+/* 技能展示 */
+.skill-show {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.skill-show h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #26a69a;
+    font-size: 28px;
+}
+
+.skill-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #26a69a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 数据可视化模块样式 */
+.visual-module {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.visual-module h2 {
+    text-align: center;
+    color: #26a69a;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.chart-item {
+    text-align: center;
+}
+.chart-item h3 {
+    color: #4fc3f7;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.chart {
+    width: 100%;
+    height: 300px;
+}
+
+/* 新增：留言板样式 */
+.message-board {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.message-board h2 {
+    text-align: center;
+    color: #26a69a;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.message-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+.message-form h3, .message-list h3 {
+    color: #4fc3f7;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #e0f7fa;
+    padding-bottom: 10px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.3);
+}
+.submit-btn {
+    background-color: #4fc3f7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #2196f3;
+}
+.msg-list-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.msg-item {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.msg-item .msg-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.msg-item .msg-username {
+    font-weight: bold;
+    color: #26a69a;
+}
+.msg-item .msg-time {
+    color: #999;
+}
+.msg-item .msg-content {
+    line-height: 1.6;
+    color: #333;
+}
+.empty-tip {
+    text-align: center;
+    color: #999;
+    padding: 50px 0;
+}
+
+/* 懒加载图片样式 */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* 悬停放大 - 技能图专用 */
+.hover-zoom {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+.hover-zoom:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+/* 点击放大弹窗 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* 回到顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #4fc3f7;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background-color: #2196f3;
+}
+
+/* 响应式适配 */
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+        width: 90%;
+    }
+    .skill-cards {
+        grid-template-columns: 1fr;
+    }
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+    .message-container {
+        grid-template-columns: 1fr;
+    }
+    .nav-menu li {
+        margin-left: 20px;
+    }
+    .inspire h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-menu li {
+        margin: 5px 10px;
+    }
+    .banner img {
+        height: 200px;
+    }
+    .inspire {
+        height: 250px;
+    }
+    .inspire h1 {
+        font-size: 24px;
+    }
+    .inspire p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .skill-show, .visual-module, .message-board {
+        width: 90%;
+    }
+    .intro-bg {
+        height: 150px;
+    }
+    .avatar img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu a {
+        font-size: 14px;
+    }
+    .skill-show h2, .visual-module h2, .message-board h2 {
+        font-size: 24px;
+    }
+    .card {
+        padding: 15px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+    /* 小屏关闭悬停放大，避免布局错乱 */
+    .hover-zoom:hover {
+        transform: none;
+    }
+    .msg-list-content {
+        max-height: 300px;
+    }
+}
