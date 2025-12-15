@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据个人博客</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav-bar">
+        <div class="logo">大数据个人博客</div>
+        <ul class="nav-menu">
+            <li><a href="#home">网站首页</a></li>
+            <li><a href="#skill">我的技能</a></li>
+            <li><a href="#visual">周学习记录</a></li>
+            <li><a href="#contact">留言交流</a></li>
+        </ul>
+    </nav>
+
+    <!-- 头部横幅 - 点击放大 -->
+    <header id="home" class="banner">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="banner.jpg" alt="横幅背景" class="lazy click-zoom" onclick="showBigImg(this)">
+    </header>
+
+    <!-- 关于我板块 -->
+    <section class="about">
+        <div class="about-left">
+            <h2>关于我</h2>
+            <div class="avatar">
+                <!-- 头像点击放大 -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="avatar.gif" alt="头像" class="lazy click-zoom" onclick="showBigImg(this)">
+            </div>
+            <ul class="info">
+                <li>姓名：龚靖</li>
+                <li>专业：大数据技术</li>
+                <li>邮箱：2702239291@qq.com</li>
+                <li>爱好：数据分析、网页制作、打游戏</li>
+            </ul>
+            <button class="hobby-btn">爱好</button>
+        </div>
+        <div class="about-right">
+            <h2>个人简介</h2>
+            <!-- 简介背景点击放大 -->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="intro-bg.jpg" alt="简介背景" class="intro-bg lazy click-zoom" onclick="showBigImg(this)">
+            <p class="intro-text">
+                本人是大数据专业学生，熟练掌握Python、MySQL数据库、C语言等技能，同时具备前端HTML/CSS开发能力。性格开朗、稳重，有活力，待人热情、真诚。在学习中积极探索技术边界，喜欢将大数据技术与前端开发结合，打造兼具实用性与美观性的项目。
+            </p>
+        </div>
+    </section>
+
+    <!-- 励志横幅 - 点击放大 -->
+    <section class="inspire click-zoom" onclick="showBigImg(this)">
+        <div class="inspire-bg" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==')" data-bg="inspire-bg.jpg"></div>
+        <h1>为理想奋斗的青春最美丽</h1>
+        <p>To strive for the ideal of the youth is the most beautiful</p>
+    </section>
+
+    <!-- 技能展示 - 悬停放大 -->
+    <section id="skill" class="skill-show">
+        <h2>技能展示</h2>
+        <div class="skill-cards">
+            <div class="card">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="skill1.jpg" alt="大数据技能" class="lazy hover-zoom">
+                <h3>大数据技术</h3>
+                <p>掌握Python、MySQL、java、C语言等核心技术，具备数据清洗、数据采集能力</p>
+            </div>
+            <div class="card">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="skill2.jpg" alt="前端作品" class="lazy hover-zoom">
+                <h3>前端开发作品</h3>
+                <p>独立完成个人博客、周学习记录看板等前端项目，了解响应式布局与交互特效开发</p>
+            </div>
+            <div class="card">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="skill3.jpg" alt="视频剪辑" class="lazy hover-zoom">
+                <h3>美食制作</h3>
+                <p>擅长家常菜制作，还有甜点比如冰淇淋、蛋糕等</p>
+            </div>
+            <div class="card">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5gMm5kgAAAABJRU5ErkJggg==" data-src="skill4.jpg" alt="数据可视化" class="lazy hover-zoom">
+                <h3>数据可视化</h3>
+                <p>使用等excel，豆包AI，R语言等工具，将复杂数据转化为直观图表，提升数据解读效率</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 大数据可视化模块 -->
+    <section id="visual" class="visual-module">
+        <h2>学习时间表</h2>
+        <div class="chart-container">
+            <!-- 技能掌握程度饼图 -->
+            <div class="chart-item">
+                <h3>技能掌握程度</h3>
+                <div id="pieChart" class="chart"></div>
+            </div>
+            <!-- 学习时长柱状图 -->
+            <div class="chart-item">
+                <h3>周学习时长分布</h3>
+                <div id="barChart" class="chart"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增：留言交流模块 -->
+    <section id="contact" class="message-board">
+        <h2>留言交流</h2>
+        <div class="message-container">
+            <!-- 留言表单 -->
+            <div class="message-form">
+                <h3>我要留言</h3>
+                <form id="msgForm">
+                    <div class="form-group">
+                        <label for="username">昵称：</label>
+                        <input type="text" id="username" placeholder="请输入您的昵称" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="useremail">邮箱：</label>
+                        <input type="email" id="useremail" placeholder="请输入您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="msgContent">留言内容：</label>
+                        <textarea id="msgContent" rows="5" placeholder="请输入您想交流的内容..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">提交留言</button>
+                </form>
+            </div>
+            <!-- 留言展示区 -->
+            <div class="message-list">
+                <h3>留言列表</h3>
+                <div id="msgList" class="msg-list-content">
+                    <!-- 留言内容动态生成 -->
+                    <div class="empty-tip">暂无留言，快来抢沙发吧～</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>版权所属：XXX 大数据个人博客</p>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- 图片放大弹窗 -->
+    <div id="imgModal" class="modal" onclick="closeModal()"></div>
+
+    <!-- 所有功能JS -->
+    <script src="script.js"></script>
+</body>
+</html>
