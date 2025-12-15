@@ -490,4 +490,22 @@ body {
     .msg-list-content {
         max-height: 300px;
     }
+
+}
+.video-section {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+.video-container {
+  margin-top: 20px;
+}
+.blog-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.blog-video:hover {
+  transform: scale(1.02); /* 悬停轻微放大，和技能图风格统一 */
 }
